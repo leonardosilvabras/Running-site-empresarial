@@ -11,7 +11,7 @@ const home = () => {
     justify-content: center;
     flex-flow: row wrap;
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     background-color: rgb(24, 24, 24);
   `;
 

@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import Projeto from "./projeto";
-
-const data = "";
-
+import CircuitoUnesp from "../assets/images/eventos/corridaUnespOurinhos/apresentacao.jpg";
+import SaudeAtiva from "../assets/images/eventos/saudeAtiva/apresentasao.jpg";
 const projetos = () => {
   const Content = styled.div`
     display: flex;
@@ -39,9 +38,18 @@ const projetos = () => {
     <Content id="Projetos">
       <Title>Eventos e serviços realizados</Title>
       <Projetos>
-        {data?.data?.map((project) => {
-          return <Projeto key={project.slug} project={project} />;
-        })}
+        <Projeto
+          title="Circuito UNESP Ourinhos de Corrida e Caminhada"
+          image={CircuitoUnesp}
+          desc="Realizada no Câmpus de Ourinhos, é um evento destinado ao publico em geral, com o objetivo de incentivar à prática esportiva para prevenção de doenças e uso de drogas, conforme o processo de integração comunitária e de inclusão social."
+          date="03/09/2022"
+        />
+        <Projeto
+          title="III Corrida e IV Caminhada Saúde Ativa"
+          image={SaudeAtiva}
+          desc="Realizada no Câmpus de Rio Claro, é um evento destinado ao publíco geral, que têm por objetivo geral, dar incentivo à prática esportiva para prevenção de doenças e uso de drogas, como parte do processo de integração comunitária e de inclusão social."
+          date="25/09/2022"
+        />
       </Projetos>
     </Content>
   );

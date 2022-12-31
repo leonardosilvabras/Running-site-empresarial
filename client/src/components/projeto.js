@@ -1,53 +1,75 @@
 import styled from "styled-components";
+import { Button } from "./buttons";
 
-const Projetos = ({ project }) => {
+const Projetos = ({ title, image, desc, date }) => {
   const lerDados = () => {
-    fetch('/routes/project').then(res => console.log(res));
-  }
-  
+    fetch("http://localhost:3000/routes/project").then((res) =>
+      console.log(res)
+    );
+  };
+
   lerDados();
 
-  const Projeto = styled.div`
+  const ProjectItems = styled.div`
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-
-    height: 400px;
-    background-color: rgb(24, 24, 24);
-  `;
-
-  const Imagem = styled.img`
-    width: 90%;
-    height: 50%;
-  `;
-
-  const Desc = styled.div`
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    color: white;
-  `;
-
-  const Text = styled.p`
-    text-align: justify;
-    width: 70%;
-  `;
-  const Date = styled.p`
+    width: 350px;
+    height: 450px;
+    background-color: #202020;
     padding: 1rem;
-    border: 1px solid #fe2e2e;
+    border-radius: 0.5rem;
+  `;
+
+  const ProjectTitle = styled.h2`
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: bold;
+    color: #fe2e2e;
+  `;
+
+  const ProjectImage = styled.img`
+    width: 280px;
+    height: 160px;
+  `;
+
+  const ProjectDesc = styled.p`
+    text-align: justify;
+    color: #fff;
+  `;
+  const ProjectEnd = styled.div`
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  `;
+
+  const ProjectData = styled.p`
+    padding: .5rem;
+    border: 2px solid #fe2e2e;
+    color: #fff;
+    font-size: 1.1rem;
   `;
 
   return (
-    <Projeto>
-      <Imagem src={project.image} alt={project.alt}></Imagem>
-      <Desc>
-        <Date>{project.date}</Date>
-        <Text>{project.description}</Text>
-      </Desc>
-    </Projeto>
+    <ProjectItems>
+      <ProjectTitle>{title}</ProjectTitle>
+      <ProjectImage src={image} />
+      <ProjectDesc>{desc}</ProjectDesc>
+      <ProjectEnd>
+        <ProjectData>{date}</ProjectData>
+        <Button
+          target="blank"
+          backgroundColor="#fe2e2e"
+          color="white"
+          width="200"
+          height="40"
+        >
+          Ler sobre
+        </Button>
+      </ProjectEnd>
+    </ProjectItems>
   );
 };
 

@@ -67,11 +67,6 @@ const nav = () => {
                 <NavItem>
                     <NavButton href="#Contato">Contato</NavButton>
                 </NavItem>
-                <NavItem>
-                    <NavButton href="/Admin">
-                        <Icon src={AdminLogo} alt="operario" />
-                    </NavButton>
-                </NavItem>
             </NavItems>
         </NavBar>
     )
