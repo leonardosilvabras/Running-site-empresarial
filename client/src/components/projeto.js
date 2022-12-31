@@ -1,15 +1,7 @@
 import styled from "styled-components";
 import { Button } from "./buttons";
 
-const Projetos = ({ title, image, desc, date }) => {
-  const lerDados = () => {
-    fetch("http://localhost:3000/routes/project").then((res) =>
-      console.log(res)
-    );
-  };
-
-  lerDados();
-
+export const Projetos = ({ title, image, desc, date }) => {
   const ProjectItems = styled.div`
     display: flex;
     flex-direction: column;
@@ -46,12 +38,11 @@ const Projetos = ({ title, image, desc, date }) => {
   `;
 
   const ProjectData = styled.p`
-    padding: .5rem;
+    padding: 0.5rem;
     border: 2px solid #fe2e2e;
     color: #fff;
     font-size: 1.1rem;
   `;
-
   return (
     <ProjectItems>
       <ProjectTitle>{title}</ProjectTitle>
@@ -73,4 +64,24 @@ const Projetos = ({ title, image, desc, date }) => {
   );
 };
 
-export default Projetos;
+export const ProjetosDetails = ({ title, image, desc, date }) => {
+  const ProjectItems = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 10vh;
+    background-color: black;
+  `;
+
+  const ProjectTitle = styled.h2`
+    font-size: 1.3rem;
+    color: white;
+  `;
+  return (
+    <ProjectItems>
+      <ProjectTitle>{title}</ProjectTitle>
+    </ProjectItems>
+  );
+};
