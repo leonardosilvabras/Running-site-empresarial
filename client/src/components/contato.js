@@ -54,6 +54,11 @@ const Contato = () => {
     color: black;
   `;
 
+  const Link = styled.a`
+    text-decoration: none;
+    color: #fff;
+  `;
+
   return (
     <Content id="Contato">
       <Title>Entre em contato conosco</Title>
@@ -77,6 +82,7 @@ const Contato = () => {
           </Contato>
         </Contatos>
 
+        <Link href="mailto:contato@myrunning.com.br">
         <Button
           href="mailto:contato@myrunning.com.br"
           target="blank"
@@ -87,6 +93,7 @@ const Contato = () => {
         >
           Pedir um orçamento
         </Button>
+        </Link>
       </Container>
     </Content>
   );

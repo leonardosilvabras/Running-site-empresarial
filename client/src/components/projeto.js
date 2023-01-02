@@ -78,24 +78,23 @@ export const ProjetosDetails = ({ title, image, desc, date }) => {
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 100vh;
-    padding: 5rem;
+    padding: 10vh 1rem 1rem 1rem;  
   `;
 
   const ProjectTitle = styled.h2`
-    margin-top: 20vh;
     font-size: 1.3rem;
     color: #fe2e2e;
   `;
 
   const ProjectImage = styled.img`
+    max-width: 100%;
     width: 600px;
-    height: 350px;
     margin-top: 1rem;
   `;
 
   const ProjectDesc = styled.p`
     text-align: justify;
+    justify-content: center;
     margin-top: 1rem;
     max-width: 800px;
   `;

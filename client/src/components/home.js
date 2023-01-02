@@ -59,6 +59,11 @@ const home = () => {
     }
   `;
 
+  const Link = styled.a`
+    text-decoration: none;
+    color: #fff;
+  `;
+
   return (
     <Home id="Home">
       <Background src={HomeBackground} alt="background" />
@@ -66,8 +71,8 @@ const home = () => {
         <div>
           <Text>Olá, bem vindo ao</Text>
           <SubTitle>Futuro</SubTitle>
+          <Link href="mailto:contato@myrunning.com.br">
           <Button
-            href="mailto:contato@myrunning.com.br"
             target="blank"
             backgroundColor="#fe2e2e"
             color="white"
@@ -76,6 +81,7 @@ const home = () => {
           >
             Pedir um orçamento
           </Button>
+          </Link>
         </div>
         <LogoMarca src={Logo} alt="logo" />
       </Apresentacao>
