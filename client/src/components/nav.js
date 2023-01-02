@@ -59,13 +59,13 @@ const nav = () => {
             </NavLogo>
             <NavItems>
                 <NavItem>
-                    <NavButton href="#Home">Inicio</NavButton>
+                    <NavButton href="/#Home">Inicio</NavButton>
                 </NavItem>
                 <NavItem>
-                    <NavButton href="#Projetos">Serviços</NavButton>
+                    <NavButton href="/#Projetos">Serviços</NavButton>
                 </NavItem>
                 <NavItem>
-                    <NavButton href="#Contato">Contato</NavButton>
+                    <NavButton href="/#Contato">Contato</NavButton>
                 </NavItem>
             </NavItems>
         </NavBar>

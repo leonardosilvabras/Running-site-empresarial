@@ -43,12 +43,14 @@ const projetos = () => {
           image={CircuitoUnesp}
           desc="Realizada no Câmpus de Ourinhos, é um evento destinado ao publico em geral, com o objetivo de incentivar à prática esportiva para prevenção de doenças e uso de drogas, conforme o processo de integração comunitária e de inclusão social."
           date="03/09/2022"
+          link='/unespourinhos'
         />
         <Projetos
           title="III Corrida e IV Caminhada Saúde Ativa"
           image={SaudeAtiva}
           desc="Realizada no Câmpus de Rio Claro, é um evento destinado ao publíco geral, que têm por objetivo geral, dar incentivo à prática esportiva para prevenção de doenças e uso de drogas, como parte do processo de integração comunitária e de inclusão social."
           date="25/09/2022"
+          link='/saudeativa'
         />
       </Projeto>
     </Content>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Button } from "./buttons";
 
-export const Projetos = ({ title, image, desc, date }) => {
+export const Projetos = ({ title, image, desc, date, link }) => {
   const ProjectItems = styled.div`
     display: flex;
     flex-direction: column;
@@ -43,6 +43,11 @@ export const Projetos = ({ title, image, desc, date }) => {
     color: #fff;
     font-size: 1.1rem;
   `;
+
+  const Link = styled.a`
+    text-decoration: none;
+    color: #fff;
+  `;
   return (
     <ProjectItems>
       <ProjectTitle>{title}</ProjectTitle>
@@ -50,15 +55,17 @@ export const Projetos = ({ title, image, desc, date }) => {
       <ProjectDesc>{desc}</ProjectDesc>
       <ProjectEnd>
         <ProjectData>{date}</ProjectData>
-        <Button
-          target="blank"
-          backgroundColor="#fe2e2e"
-          color="white"
-          width="200"
-          height="40"
-        >
-          Ler sobre
-        </Button>
+        <Link href={link}>
+          <Button
+            target="blank"
+            backgroundColor="#fe2e2e"
+            color="white"
+            width="200"
+            height="40"
+          >
+            Ler sobre
+          </Button>
+        </Link>
       </ProjectEnd>
     </ProjectItems>
   );
@@ -67,21 +74,36 @@ export const Projetos = ({ title, image, desc, date }) => {
 export const ProjetosDetails = ({ title, image, desc, date }) => {
   const ProjectItems = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    padding-top: 10vh;
-    background-color: black;
+    padding: 5rem;
   `;
 
   const ProjectTitle = styled.h2`
+    margin-top: 20vh;
     font-size: 1.3rem;
-    color: white;
+    color: #fe2e2e;
+  `;
+
+  const ProjectImage = styled.img`
+    width: 600px;
+    height: 350px;
+    margin-top: 1rem;
+  `;
+
+  const ProjectDesc = styled.p`
+    text-align: justify;
+    margin-top: 1rem;
+    max-width: 800px;
   `;
   return (
     <ProjectItems>
       <ProjectTitle>{title}</ProjectTitle>
+      <ProjectImage src={image} />
+      <ProjectDesc>{desc}</ProjectDesc>
     </ProjectItems>
   );
 };
