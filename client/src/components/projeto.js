@@ -70,39 +70,3 @@ export const Projetos = ({ title, image, desc, date, link }) => {
     </ProjectItems>
   );
 };
-
-export const ProjetosDetails = ({ title, image, desc, date }) => {
-  const ProjectItems = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    padding: 10vh 1rem 1rem 1rem;  
-  `;
-
-  const ProjectTitle = styled.h2`
-    font-size: 1.3rem;
-    color: #fe2e2e;
-  `;
-
-  const ProjectImage = styled.img`
-    max-width: 100%;
-    width: 600px;
-    margin-top: 1rem;
-  `;
-
-  const ProjectDesc = styled.p`
-    text-align: justify;
-    justify-content: center;
-    margin-top: 1rem;
-    max-width: 800px;
-  `;
-  return (
-    <ProjectItems>
-      <ProjectTitle>{title}</ProjectTitle>
-      <ProjectImage src={image} />
-      <ProjectDesc>{desc}</ProjectDesc>
-    </ProjectItems>
-  );
-};
