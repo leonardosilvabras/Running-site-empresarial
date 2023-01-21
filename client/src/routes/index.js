@@ -12,8 +12,6 @@ function Routers() {
         <Route path="/" element={<User />} />
         <Route path="/unespourinhos" element={<UnespOurinhos />} />
         <Route path="/saudeativa" element={<SaudeAtiva />} />
-        <Route path="/Admin" element={<Admin />} />
-        <Route path="/Admin/Painel" element={<Painel />} />
       </Routes>
     </Router>
   );
